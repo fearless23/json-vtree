@@ -6,7 +6,7 @@
       "es2022",
       "dom"
     ],
-    "module": "commonjs",
+    "module": "ES2020",
     "target": "es2022",
     "strict": true,
     "esModuleInterop": true,
