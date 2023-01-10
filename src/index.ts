@@ -1,5 +1,5 @@
-import VTree from "./vtree";
-import { /*showJsonData,*/ createRootNode } from "./jsonToNode";
+import VTree from "./vtree.js";
+import { /*showJsonData,*/ createRootNode } from "./jsonToNode.js";
 
 interface VisualizeOptions {
 	json: unknown;

@@ -1,5 +1,5 @@
-import Node from "./node/node";
-import { DiagonalData } from "./types";
+import Node from "./node/node.js";
+import { DiagonalData } from "./types.js";
 
 const getAllNodes = (startingNode: Node): Node[] => {
 	const nodes = [startingNode];

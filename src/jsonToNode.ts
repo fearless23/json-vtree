@@ -1,10 +1,10 @@
-import StringNode from "./node/string";
-import ArrayNode from "./node/array";
-import ArrayLayout from "./layout/array";
-import TableNode from "./node/table";
-import DummyNode from "./node/dummy";
-import LinkNameDecorator from "./decorator/linkName";
-import { PrimitiveValue, ObjectTypeNode } from "./types";
+import StringNode from "./node/string.js";
+import ArrayNode from "./node/array.js";
+import ArrayLayout from "./layout/array.js";
+import TableNode from "./node/table.js";
+import DummyNode from "./node/dummy.js";
+import LinkNameDecorator from "./decorator/linkName.js";
+import { PrimitiveValue, ObjectTypeNode } from "./types.js";
 
 const isPrimitive = (d: any) => {
 	const type = typeof d;

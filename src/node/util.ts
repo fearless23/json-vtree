@@ -1,4 +1,4 @@
-import { G, PrimitiveValue } from "../types";
+import { G, PrimitiveValue } from "../types.js";
 const MAX_LEN = 32;
 
 interface AppendBBoxOptions {
@@ -10,7 +10,7 @@ interface AppendBBoxOptions {
 }
 
 const getClassName = (d: any) => {
-	let name = "";
+	let name = ".js";
 	const type = typeof d;
 
 	if (d === null) {

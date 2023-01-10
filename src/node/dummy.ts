@@ -1,5 +1,5 @@
-import { G } from "../types";
-import Node from "./node";
+import { G } from "../types.js";
+import Node from "./node.js";
 
 export default class DummyNode extends Node {
 	r = 4;

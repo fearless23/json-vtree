@@ -1,7 +1,7 @@
-import { G } from "../types";
-import Node from "../node/node";
-import ArrayNode from "../node/array";
-import { diagonalLink } from "../util";
+import { G } from "../types.js";
+import Node from "../node/node.js";
+import ArrayNode from "../node/array.js";
+import { diagonalLink } from "../util.js";
 
 const MARGIN = 10;
 const HEIGHT = 50;

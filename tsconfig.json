@@ -1,20 +1,20 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 18",
   "compilerOptions": {
     "lib": [
-      "es2022",
-      "dom"
+      "ES2022",
+      "DOM"
     ],
-    "module": "ES2020",
-    "target": "es2022",
+    "target": "ES2022",
+    "module": "Node16",
+    "outDir": "build",
+    "declaration": true,
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "lib",
-    "declaration": true
+    "esModuleInterop": true
   },
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
   "include": [
     "src/**/*"
   ]

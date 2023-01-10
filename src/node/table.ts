@@ -1,6 +1,6 @@
-import Node from "./node";
-import { appendRectText, BBox } from "./util";
-import { G, PrimitiveValue, D3SVGG } from "../types";
+import Node from "./node.js";
+import { appendRectText, BBox } from "./util.js";
+import { G, PrimitiveValue, D3SVGG } from "../types.js";
 
 type TableRow = { g: D3SVGG; bbox: BBox }[];
 type Table = TableRow[];

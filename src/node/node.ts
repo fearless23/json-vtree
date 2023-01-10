@@ -11,8 +11,8 @@
  */
 
 import * as dd3 from "d3";
-import ArrayLayout from "../layout/array";
-import LinkNameDecorator from "../decorator/linkName";
+import ArrayLayout from "../layout/array.js";
+import LinkNameDecorator from "../decorator/linkName.js";
 
 type G = dd3.Selection<any, any, null, undefined>;
 

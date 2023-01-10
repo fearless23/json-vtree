@@ -1,6 +1,6 @@
-import { G, PrimitiveValue } from "../types";
-import Node from "./node";
-import { appendRectText } from "./util";
+import { G, PrimitiveValue } from "../types.js";
+import Node from "./node.js";
+import { appendRectText } from "./util.js";
 
 export default class StringNode extends Node {
 	textPad: number = 4;

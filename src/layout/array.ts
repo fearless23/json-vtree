@@ -1,6 +1,6 @@
-import { G } from "../types";
-import Node from "../node/node";
-import { diagonalLink } from "../util";
+import { G } from "../types.js";
+import Node from "../node/node.js";
+import { diagonalLink } from "../util.js";
 
 const DURATION = 1000;
 

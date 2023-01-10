@@ -1,12 +1,12 @@
 import * as _d3 from "d3";
-import Node from "./node/node";
-import { visitAfter } from "./util";
-import TableNode from "./node/table";
-import ArrayNode from "./node/array";
-import StringNode from "./node/string";
-import TreeLayout from "./layout/tree";
-import ArrayLayout from "./layout/array";
-import { G, D3Zoom, D3SVGSVG } from "./types";
+import Node from "./node/node.js";
+import { visitAfter } from "./util.js";
+import TableNode from "./node/table.js";
+import ArrayNode from "./node/array.js";
+import StringNode from "./node/string.js";
+import TreeLayout from "./layout/tree.js";
+import ArrayLayout from "./layout/array.js";
+import { G, D3Zoom, D3SVGSVG } from "./types.js";
 
 const WIDTH = 960;
 const HEIGHT = 800;

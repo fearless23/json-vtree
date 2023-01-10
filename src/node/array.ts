@@ -1,6 +1,6 @@
-import Node from "./node";
-import ArrayLayout from "../layout/array";
-import { G } from "../types";
+import Node from "./node.js";
+import ArrayLayout from "../layout/array.js";
+import { G } from "../types.js";
 
 const defaultLayout = new ArrayLayout();
 
