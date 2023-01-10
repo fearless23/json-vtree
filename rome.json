@@ -1,0 +1,35 @@
+{
+  "files": {
+    "ignore": [
+      ".husky",
+      ".vscode",
+      "build",
+      "docs",
+      "node_modules"
+    ]
+  },
+  "formatter": {
+    "lineWidth": 100
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUndeclaredVariables": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off"
+      },
+      "nursery": {
+        "noVar": "off",
+        "noVoidTypeReturn": "error",
+        "useConst": "error",
+        "useNumericLiterals": "error",
+        "noRestrictedGlobals": "error",
+        "useExhaustiveDependencies": "off",
+        "noBannedTypes": "off"
+      }
+    }
+  }
+}
