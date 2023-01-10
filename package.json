@@ -1,8 +1,7 @@
 {
-  "name": "json-to-vtree",
+  "name": "@jaspreet23/json-vtree",
   "version": "1.0.0",
   "description": "Convert JSON to Visual Tree SVG, PNG",
-  "main": "src/index.ts",
   "dependencies": {
     "d3": "^7.8.0"
   },
@@ -12,6 +11,8 @@
     "rome": "^11.0.0",
     "typescript": "^4.9.4"
   },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint:check": "rome check .",

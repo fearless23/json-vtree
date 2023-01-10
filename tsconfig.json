@@ -1,29 +1,21 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 18",
   "compilerOptions": {
-    "target": "ESNext",
     "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
+      "es2022",
+      "dom"
     ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "target": "es2022",
     "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "outDir": "lib",
+    "declaration": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.js",
-  ],
-  "exclude": [
-    "node_modules",
-    "**/node_modules/*",
+    "src/**/*"
   ]
 }

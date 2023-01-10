@@ -21,7 +21,7 @@ export const visitAfter = (node: Node, callback: (node: Node) => void) => {
 };
 
 export const diagonalLink = (d: DiagonalData) => {
-	return (
-		`M${d.source.x},${d.source.y}C${(d.source.x + d.target.x) / 2},${d.source.y} ${(d.source.x + d.target.x) / 2},${d.target.y} ${d.target.x},${d.target.y}`
-	);
+	return `M${d.source.x},${d.source.y}C${(d.source.x + d.target.x) / 2},${d.source.y} ${
+		(d.source.x + d.target.x) / 2
+	},${d.target.y} ${d.target.x},${d.target.y}`;
 };
