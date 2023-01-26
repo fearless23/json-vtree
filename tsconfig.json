@@ -13,7 +13,7 @@
     "incremental": true,
     "noEmit": false,
     "removeComments": true,
-    "noUncheckedIndexedAccess": true,
+    // "noUncheckedIndexedAccess": true,
   },
   "exclude": [
     "node_modules",
