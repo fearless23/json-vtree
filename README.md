@@ -6,55 +6,43 @@
 
 ### How to use
 ```tsx
-import { Button } from "@mantine/core";
+import { Button } from ".///";
 import { useRef, useState } from "react";
 import { visualize, VisualizeOutput } from "@jaspreet23/json-vtree";
 
+type JsonVisualizeParams = { height?: number; width?: number; json: unknown };
+
+const SvgAsImage = ({ svgText }: { svgText: string }) => (
+	<img
+		src={`data:image/svg+xml;utf8,${encodeURIComponent(svgText)}`}
+		alt={"json-vtree"}
+		style={{ width: "100%", minHeight: "500px" }}
+	/>
+);
+
 // this is optimized, new TreeNode is not created for every json change
 // new TreeNode is only created once vtree.render is called
-export const JsonVisualize = ({
-	width,
-	height,
-	json,
-}: {
-	height?: number;
-	width?: number;
-	json: unknown;
-}) => {
+export const JsonVisualize = ({ width, height, json }: JsonVisualizeParams) => {
 	const containerRef = useRef<HTMLDivElement>(null);
-	const [vtree, set_vtree] = useState<VisualizeOutput | null>(null);
-	const [svg_text, set_svg_text] = useState("");
-	const on_click_render = async () => {
-		set_vtree(null);
+	const [vtree, setVtree] = useState<VisualizeOutput | null>(null);
+	const [svgText, setSvgText] = useState("");
+	const onShowImage = () => setSvgText(vtree.get_svg());
+	const onClickRender = async () => {
+		setVtree(null);
 		const container = containerRef.current as HTMLDivElement;
 		if (!container) return;
 		container.innerHTML = "";
 		const vtree = visualize({ width, height, json, container });
-		set_vtree(vtree);
+		setVtree(vtree);
 		vtree.render();
-	};
-
-	const on_show_image = () => {
-		set_svg_text(vtree.get_svg());
 	};
 
 	return (
 		<>
-			{vtree && <Button onClick={on_show_image}>Show Image</Button>}
-			<Button onClick={on_click_render} variant="outline">
-				Render
-			</Button>
-			<div
-				style={{ border: "1px solid black", background: "white", height: "500px" }}
-				ref={containerRef}
-			/>
-			{svg_text && (
-				<img
-					src={`data:image/svg+xml;utf8,${encodeURIComponent(svg_text)}`}
-					alt={"Dfd"}
-					style={{ width: "100%", minHeight: "500px" }}
-				/>
-			)}
+			{vtree && <Button onClick={onShowImage}>Show Image</Button>}
+			<Button onClick={onClickRender}>Render</Button>
+			<div style={{ height: "500px" }} ref={containerRef} />
+			{svgText && <SvgAsImage svgText={svgText} />}
 		</>
 	);
 };
