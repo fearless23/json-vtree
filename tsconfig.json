@@ -9,7 +9,11 @@
     "outDir": "build",
     "declaration": true,
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "incremental": true,
+    "noEmit": false,
+    "removeComments": true,
+    "noUncheckedIndexedAccess": true,
   },
   "exclude": [
     "node_modules",
